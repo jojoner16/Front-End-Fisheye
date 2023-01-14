@@ -1,76 +1,153 @@
-#contact_modal {
-    display: none;
+/* Section images et vidéos photographe */
+img,
+video {
+  object-fit: cover;
+}
+.photographer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 24.3vw);
+  row-gap: 2vw;
+  justify-content: space-between;
+  margin: 1.5vw 6.9vw 5.2vw;
+  align-items: center;
+}
+.photographer-gallery .lnk-media {
+  display: inline-block;
+}
+.media {
+  border-radius: 5px;
+  width: 24.3vw;
+  height: 20.8vw;
+}
+img {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+.photographer-gallery .caption {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+  color: #901c1c;
+  font-size: 1.4vw;
+  font-weight: 500;
+}
+.photographer-gallery .caption .title {
+  overflow: hidden;
+  width: 19vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+/* Baniere photographe */
+.photographer-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6.9vw 0;
+  border-radius: 5px;
+  padding: 0 3.4vw;
+  height: 21.7vw;
+  background-color: #fafafa;
+}
+.photographer-banner .name {
+  font-size: 4.4vw;
+  font-weight: 400;
+  line-height: 5.7vw;
+}
+.photographer-banner .location {
+  font-size: 1.6vw;
+  font-weight: 400;
+  line-height: 2.1vw;
+}
+.photographer-banner .tagline {
+  margin-top: 1.3vw;
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.5vw;
+}
+.photographer-banner .btn-contact {
+  padding: 1.4vw 0.7vw;
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 1.8vw;
 }
 
-.contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
+/* Bouton contact */
+button {
+  border-radius: 5px;
+  border: none;
+  padding: 1.5972222222vw 1.25vw;
+  background-color: #911c1c;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.25vw;
+  font-weight: 700;
+  line-height: 1.5972222222vw;
+  cursor: pointer;
+}
+.btn-contact:hover,
+.btn-contact:focus {
+  background-color: #d3573c;
+  color: #000;
 }
 
-.modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+/* Section filtres */
+.filters {
+  display: flex;
+  align-items: center;
+  margin: 0.625vw 6.9444444444vw 0;
+  font-size: 1.25vw;
+  font-weight: 700;
+  line-height: 1.5972222222vw;
 }
-
-.modal header {
-    justify-content: space-between;
-    width: 100%;
+.filters-dropdown {
+  position: relative;
+  margin-left: 1.7361111111vw;
 }
-
-.modal header img {
-    cursor: pointer;
+.filters-selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1.5277777778vw 1.3888888889vw;
+  width: 11.8055555556vw;
+  background-color: #911c1c;
+  color: #fff;
+  cursor: pointer;
 }
-
-.modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
+.filters-value {
+  margin-right: 1.8055555556vw;
 }
-
-form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+.filters-option {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5555555556vw 0.6944444444vw;
+  background-color: #911c1c;
+  color: #fff;
 }
-
-form label {
-    color: #312E2E;
-    font-size: 36px;
+.filters-item {
+  padding: 0.9722222222vw 0.6944444444vw;
+  cursor: pointer;
 }
-
-form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
+.filters-item:nth-child(2) {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
-
-form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
+.filters-button {
+  position: absolute;
+  z-index: 15;
+  top: 1.5972222222vw;
+  right: 1.3888888889vw;
+  padding: 0;
+  transform: rotate(0deg);
+  transition: transform 0.3s linear;
+}
+.filters-button.open {
+  transform: rotate(180deg);
+  transition: transform 0.3s linear;
 }
