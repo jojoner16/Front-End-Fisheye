@@ -6,27 +6,30 @@ body {
 a {
   text-decoration: none;
 }
+
+/* Header */
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 6.9444444444vw 0;
-  height: 9.5833333333vw;
+  padding: 0 6.9vw 0;
+  height: 8vw;
 }
 #header h1 {
   color: #901c1c;
   font-size: 2.5vw;
   font-weight: 400;
-  line-height: 3.2638888889vw;
 }
 #header .logo {
-  height: 3.4722222222vw;
+  height: 3.4vw;
 }
+
+/* Section photographes */
 .photographer-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5.4166666667vw;
-  padding: 4.1666666667vw 0 7.7777777778vw;
+  gap: 4vw;
+  padding: 2vw 0 2vw;
 }
 .photographer-section article {
   justify-self: center;
@@ -35,39 +38,46 @@ a {
   align-items: center;
   flex-direction: column;
 }
+
+/* Portrait de chaque photographe */
 .portrait {
   border-radius: 50%;
-  width: 13.8888888889vw;
-  height: 13.8888888889vw;
+  width: 13vw;
+  height: 13vw;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 .photographer-section article a {
-  width: 21.5277777778vw;
-  height: 19.2361111111vw;
+  width: 21vw;
+  height: 17vw;
   text-align: center;
 }
 .photographer-section article a .name {
-  margin-top: 1.3888888889vw;
+  margin-top: 1vw;
   font-size: 2.5vw;
   font-weight: 400;
-  line-height: 3.2638888889vw;
 }
 .name {
   color: #d3573c;
 }
 .photographer-section article .location {
-  font-size: 0.9027777778vw;
+  margin-top: 1vw;
+  margin-bottom: 0;
+  font-size: 1.3vw;
   font-weight: 400;
-  line-height: 1.1805555556vw;
+}
+.location {
+  color: #901c1c;
 }
 .photographer-section article .tagline {
-  margin: 0.2083333333vw auto;
-  font-size: 0.6944444444vw;
+  margin: 0.2vw auto;
+  font-size: 0.8vw;
   font-weight: 400;
-  line-height: 0.9027777778vw;
 }
 .photographer-section article .price {
-  font-size: 0.625vw;
+  margin: 0.2vw auto;
+  font-size: 0.75vw;
   font-weight: 400;
-  line-height: 0.8333333333vw;
+}
+.price {
+  color: #525252;
 }
