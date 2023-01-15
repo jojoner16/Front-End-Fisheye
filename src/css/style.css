@@ -1,10 +1,20 @@
 @import url("photographer.css");
-
+@import "https://fonts.googleapis.com/css2?family=DM+Sans&display=swap";
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "DM Sans", sans-serif;
 }
 a {
   text-decoration: none;
+}
+li {
+  list-style: none;
 }
 
 /* Header */

@@ -5,7 +5,7 @@ video {
 }
 .photographer-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 24.3vw);
+  grid-template-columns: repeat(3, 28vw);
   row-gap: 2vw;
   justify-content: space-between;
   margin: 1.5vw 6.9vw 5.2vw;
@@ -27,6 +27,7 @@ img {
 .photographer-gallery .caption {
   display: flex;
   justify-content: space-between;
+  width: 24.3vw;
   padding-top: 0;
   color: #901c1c;
   font-size: 1.4vw;
@@ -47,30 +48,31 @@ img {
   margin: 0 6.9vw 0;
   border-radius: 5px;
   padding: 0 3.4vw;
-  height: 21.7vw;
+  height: 20vw;
   background-color: #fafafa;
 }
 .photographer-banner .name {
   font-size: 4.4vw;
   font-weight: 400;
-  line-height: 5.7vw;
+  margin-top: 0;
+  margin-bottom: 1vw;
 }
 .photographer-banner .location {
   font-size: 1.6vw;
   font-weight: 400;
-  line-height: 2.1vw;
+  margin-top: 0;
+  margin-bottom: 1vw;
 }
 .photographer-banner .tagline {
   margin-top: 1.3vw;
   font-size: 1.25vw;
   font-weight: 400;
-  line-height: 1.5vw;
+  margin: 0;
 }
 .photographer-banner .btn-contact {
   padding: 1.4vw 0.7vw;
   font-size: 1.3vw;
   font-weight: 700;
-  line-height: 1.8vw;
 }
 
 /* Bouton contact */
@@ -96,28 +98,28 @@ button {
 .filters {
   display: flex;
   align-items: center;
-  margin: 0.625vw 6.9444444444vw 0;
+  margin: 0.6vw 6.9vw 0;
   font-size: 1.25vw;
   font-weight: 700;
-  line-height: 1.5972222222vw;
+  line-height: 1.5vw;
 }
 .filters-dropdown {
   position: relative;
-  margin-left: 1.7361111111vw;
+  margin-left: 1.7vw;
 }
 .filters-selected {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  padding: 1.5277777778vw 1.3888888889vw;
-  width: 11.8055555556vw;
+  padding: 1.5vw 1.3vw;
+  width: 11.8vw;
   background-color: #911c1c;
   color: #fff;
   cursor: pointer;
 }
 .filters-value {
-  margin-right: 1.8055555556vw;
+  margin-right: 1.8vw;
 }
 .filters-option {
   position: absolute;
@@ -126,12 +128,12 @@ button {
   display: none;
   border-radius: 5px;
   width: 100%;
-  padding: 0.5555555556vw 0.6944444444vw;
+  padding: 0.5vw 0.6vw;
   background-color: #911c1c;
   color: #fff;
 }
 .filters-item {
-  padding: 0.9722222222vw 0.6944444444vw;
+  padding: 1vw 0.7vw;
   cursor: pointer;
 }
 .filters-item:nth-child(2) {
@@ -141,8 +143,8 @@ button {
 .filters-button {
   position: absolute;
   z-index: 15;
-  top: 1.5972222222vw;
-  right: 1.3888888889vw;
+  top: 1.5vw;
+  right: 1.3vw;
   padding: 0;
   transform: rotate(0deg);
   transition: transform 0.3s linear;
@@ -150,4 +152,25 @@ button {
 .filters-button.open {
   transform: rotate(180deg);
   transition: transform 0.3s linear;
+}
+
+/* likes/price photographe */
+.insert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: #d3573c;
+  color: #000;
+  right: 2.5vw;
+  bottom: 0;
+  z-index: 5;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 0 2.3vw 0 2.1vw;
+  width: 20vw;
+  height: 4vw;
+  font-size: 1.6vw;
+  font-weight: 700;
+  line-height: 2.1vw;
 }
