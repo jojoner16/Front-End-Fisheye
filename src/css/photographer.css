@@ -287,3 +287,40 @@ button {
 #lightbox {
   background-color: #fff;
 }
+#lightbox .modal {
+  position: relative;
+  justify-content: center;
+  width: 87vw;
+}
+#lightbox .modal .media {
+  width: 52vw;
+  height: 44.4vw;
+}
+#lightbox .modal button {
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: #911c1c;
+  font-size: 3.4vw;
+  line-height: 3.4vw;
+}
+.lightbox-close {
+  position: absolute;
+  top: 1.2vw;
+  right: 12.4vw;
+  z-index: 100;
+  display: flex;
+  width: 2.9vw;
+  height: 2.9vw;
+}
+.lightbox-close .icon-close {
+  background-color: #911c1c;
+}
+.lightbox-container {
+  margin: 0 2vw;
+}
+.lightbox-caption {
+  margin-top: 0.6vw;
+  color: #911c1c;
+  font-size: 1.6vw;
+  font-weight: 400;
+}
