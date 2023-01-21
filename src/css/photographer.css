@@ -5,7 +5,7 @@ video {
 }
 .photographer-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 28vw);
+  grid-template-columns: repeat(3, 24.3vw);
   row-gap: 2vw;
   justify-content: space-between;
   margin: 1.5vw 6.9vw 5.2vw;
@@ -79,13 +79,13 @@ img {
 button {
   border-radius: 5px;
   border: none;
-  padding: 1.5972222222vw 1.25vw;
+  padding: 1.59vw 1.25vw;
   background-color: #911c1c;
   color: #fff;
   font-family: inherit;
   font-size: 1.25vw;
   font-weight: 700;
-  line-height: 1.5972222222vw;
+  line-height: 1.59vw;
   cursor: pointer;
 }
 .btn-contact:hover,
@@ -168,7 +168,7 @@ button {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   padding: 0 2.3vw 0 2.1vw;
-  width: 20vw;
+  width: 26vw;
   height: 4vw;
   font-size: 1.6vw;
   font-weight: 700;
@@ -281,4 +281,9 @@ button {
   padding: 23px 50px;
   font-size: 18px;
   line-height: 23px;
+}
+
+/* lightbox */
+#lightbox {
+  background-color: #fff;
 }
