@@ -33,7 +33,7 @@ class App {
       "afterend",
       Components.ContactFormDOM(photographer.name)
     );
-    // photographerMain.insertAdjacentHTML("afterend", Components.LightBoxDOM());
+    photographerMain.insertAdjacentHTML("afterend", Components.LightBoxDOM());
   }
 
   async init() {
