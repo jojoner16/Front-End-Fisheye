@@ -294,14 +294,13 @@ button {
 }
 #lightbox .modal .media {
   width: 52vw;
-  height: 44.4vw;
+  height: 44.2vw;
 }
 #lightbox .modal button {
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
   color: #911c1c;
   font-size: 3.4vw;
-  line-height: 3.4vw;
 }
 .lightbox-close {
   position: absolute;
