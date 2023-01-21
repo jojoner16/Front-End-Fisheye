@@ -1,6 +1,7 @@
 import Subject from "./subject.js";
 import ContactFormUtils from "./contactForm.js";
 import SortByUtils from "./sortBy.js";
+import LikesUtils from "./likes.js";
 
 export default class Utils {
   static handler() {
@@ -9,9 +10,11 @@ export default class Utils {
     const subject = new Subject();
     const contactFormUtils = new ContactFormUtils("#contact");
     const sortByUtils = new SortByUtils(gallery);
+    const likesUtils = new LikesUtils();
 
     subject.attach(contactFormUtils);
     subject.attach(sortByUtils);
+    subject.attach(likesUtils);
 
     subject.notify();
   }
