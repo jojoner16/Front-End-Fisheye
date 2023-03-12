@@ -3,6 +3,7 @@ import VideoModel from "../models/video.js";
 import MediaTemplate from "../templates/media.js";
 
 export default class MediaFactory {
+  // créer un modèle de données pour le média (image ou vidéo) et retourner le modèle
   constructor(data) {
     if (data.image !== undefined) {
       this._data = new ImageModel(data);

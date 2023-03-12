@@ -1,4 +1,5 @@
 export default class Components {
+  // créer le template HTML pour le dropdown de tri et retourner le template
   static SortByDropdownDOM() {
     return `
         <div class="filters">
@@ -18,6 +19,7 @@ export default class Components {
       `;
   }
 
+  // créer le template HTML pour le formulaire de contact et retourner le template
   static ContactFormDOM(name) {
     return `
       <div id="contact" class="modal-bg" aria-hidden="true">
@@ -56,6 +58,7 @@ export default class Components {
     `;
   }
 
+  // créer le template HTML pour la lightbox et retourner le template
   static LightBoxDOM() {
     return `
       <div id="lightbox" class="modal-bg" aria-hidden="true">

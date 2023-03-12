@@ -1,4 +1,5 @@
 export default class MediaModel {
+  // créer un modèle de données pour le média (image ou vidéo) et retourner le modèle
   constructor(data) {
     this._id = data.id;
     this._photographerId = data.photographerId;
@@ -9,6 +10,7 @@ export default class MediaModel {
     this._path = "assets/media/";
   }
 
+  // getters pour les médias (images et vidéos) et retourner les données
   get id() {
     return this._id;
   }

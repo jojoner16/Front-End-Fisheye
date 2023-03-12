@@ -1,6 +1,7 @@
 import FormData from "./formData.js";
 
 export default class CheckInputs extends FormData {
+  // Vérifie si l'entrée du nom est valide ou non
   checkName(formdata) {
     const name = formdata.querySelector("input").value;
     const regex = /^[A-Za-z- ]+$/;
@@ -14,6 +15,7 @@ export default class CheckInputs extends FormData {
       );
   }
 
+  // Vérifie si l'entrée de l'email est valide ou non
   checkEmail(formdata) {
     const email = formdata.querySelector("input").value;
     const regex =
@@ -24,6 +26,7 @@ export default class CheckInputs extends FormData {
       throw new Error("Veuillez entrer un email valide");
   }
 
+  // Vérifie si l'entrée du message est valide ou non
   checkMessage(formdata) {
     const message = formdata.querySelector("textarea").value;
 

@@ -1,10 +1,12 @@
 export default class SortByUtils {
+  // cree une instance de la classe SortByUtils qui prend en paramètre la galerie de photographes
   constructor(gallery) {
     this._gallery = gallery;
     this._icon = document.querySelector(".filters-button");
     this._option = document.querySelector(".filters-option");
   }
 
+  // cree une méthode pour trier la galerie de photographes par popularité, date ou titre
   #sortByPopularity(a, b) {
     const likesA = parseInt(a.dataset.likes);
     const likesB = parseInt(b.dataset.likes);
@@ -23,6 +25,7 @@ export default class SortByUtils {
     return titleA < titleB ? -1 : 1;
   }
 
+  // cree une méthode pour trier la galerie de photographes par popularité, date ou titre
   sortByHandler(filtersValue) {
     switch (filtersValue) {
       case "Popularité":
@@ -38,11 +41,13 @@ export default class SortByUtils {
         break;
     }
 
+    // vide la galerie de photographes
     this._gallery.forEach((el) =>
       document.querySelector(".photographer-gallery").appendChild(el)
     );
   }
 
+  // cree une méthode pour ouvrir et fermer le menu déroulant des filtres
   openFilters() {
     this._icon.className += " open";
     this._option.style.display = "block";
@@ -54,6 +59,7 @@ export default class SortByUtils {
     document.querySelector(".photographer-gallery").focus();
   }
 
+  // cree une méthode pour gérer les événements clavier sur les filtres
   filtersItemHandler(item, filtersValue, filtersOption, filtersSelected) {
     filtersValue.textContent = item.textContent;
     filtersOption.setAttribute("aria-activedescendant", item.dataset.value);
@@ -63,6 +69,7 @@ export default class SortByUtils {
     filtersSelected.setAttribute("aria-expanded", false);
   }
 
+  // cree une méthode pour initialiser les événements clavier et click sur les filtres et les boutons
   init() {
     const filtersSelected = document.querySelector(".filters-selected");
     const filtersValue = document.querySelector(".filters-value");
@@ -81,6 +88,7 @@ export default class SortByUtils {
       }
     });
 
+    // gère les événements clavier et click sur les filtres
     filtersItem.forEach((item) => {
       item.addEventListener("click", () => {
         this.filtersItemHandler(

@@ -1,4 +1,5 @@
 export default class ModalUtils {
+  // cree une instance de la classe ModalUtils qui prend en paramètre la modal de contact et la modal de lightbox
   constructor(modal) {
     this._modalBg = document.querySelector(modal);
     this._modal = document.querySelector(".modal");
@@ -6,6 +7,7 @@ export default class ModalUtils {
     this._main = document.querySelector("#main");
   }
 
+  // cree une méthode pour ouvrir la modal de contact et la lightbox et gérer les événements clavier
   openModal(focus, fn) {
     document.body.style.overflow = "hidden";
     this._modalBg.style.display = "block";
@@ -19,6 +21,7 @@ export default class ModalUtils {
     document.addEventListener("keydown", fn);
   }
 
+  // cree une méthode pour fermer la modal de contact et la lightbox et gérer les événements clavier
   closeModal(focus, fn) {
     document.body.style.overflow = "auto";
     this._modalBg.style.display = "none";

@@ -3,6 +3,7 @@ export default class PhotographerTemplate {
     this._data = data;
   }
 
+  // afficher la carte de chaque photographes sur la page d'accueil
   UserCardDOM() {
     return `
         <article class="photographer" data-id="${this._data.id}" data-name="${this._data.name}">
@@ -17,10 +18,12 @@ export default class PhotographerTemplate {
       `;
   }
 
+  // afficher le nom du photographe dans le titre de la page
   UserTitleDOM() {
     return `Fisheye - ${this._data.name}`;
   }
 
+  // afficher les informations du photographe dans le header de la page photographe
   UserBannerDOM() {
     return `
       <div class="info">
@@ -29,10 +32,11 @@ export default class PhotographerTemplate {
         <p class="tagline">${this._data.tagline}</p>
       </div>
       <button class="btn btn-contact open" type="button" aria-label="Contact Me">Contactez-moi</button>
-      <img class="portrait" src=${this._data.portrait} alt="${this.name}">
+      <img class="portrait" src=${this._data.portrait} alt="${this._data.name}">
     `;
   }
 
+  // afficher les likes et le prix du photographe en bas de la page photographe
   UserInsertDOM() {
     return `
       <div class="insert">

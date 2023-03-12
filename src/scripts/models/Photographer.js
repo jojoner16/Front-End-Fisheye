@@ -1,4 +1,6 @@
+// exportation des données de chaque photographe
 export default class PhotographerModel {
+  // créer un modèle de données pour le photographe
   constructor(data) {
     this._name = data.name;
     this._id = data.id;
@@ -9,6 +11,7 @@ export default class PhotographerModel {
     this._portrait = data.portrait;
   }
 
+  // getters pour les données du modèle de données du photographe
   get name() {
     return this._name;
   }

@@ -5,6 +5,7 @@ import LikesUtils from "./likes.js";
 import LightBoxUtils from "./lightBox.js";
 
 export default class Utils {
+  // Singleton pattern to avoid multiple instances of the same class
   static handler() {
     const gallery = [...document.querySelectorAll("[data-id]")];
 
@@ -14,6 +15,8 @@ export default class Utils {
     const likesUtils = new LikesUtils();
     const lightBoxUtils = new LightBoxUtils("#lightbox", gallery);
 
+    // Attach all the observers to the subject
+    // Attachez tous les observateurs au sujet
     subject.attach(contactFormUtils);
     subject.attach(sortByUtils);
     subject.attach(likesUtils);
